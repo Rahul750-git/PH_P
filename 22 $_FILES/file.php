@@ -1,10 +1,18 @@
 <?php 
 //  print_r($_FILES);
 
-if ($_FILES['fileupload']) {
-    $path = $_FILES['fileupload']['name'];
-    $upload_path = './upload files'.$path;
-    move_uploaded_file($_FILES['fileupload']['tmp_name'], $upload_path)
-    || die('failed to upload file');
+if ($_FILES['File']) {
+    $path = $_FILES['File']['name'];
+    $upload_path = "./upload".$path;
+  if ( move_uploaded_file($_FILES['File']['tmp_name'], $upload_path)) {
+       echo'Upload file';
+  } 
+  else {
+    echo 'failed upload file ';
+  }
+     
 }
+else{
+      die('failed to upload file');  
+    }
 ?>
