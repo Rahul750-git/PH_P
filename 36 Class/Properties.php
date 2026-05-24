@@ -1,12 +1,15 @@
 <?php
 
-class Properties {
-  public $name = 'ram'; 
-  function getname(){
+class Properties
+{
+  public $name = 'ram';
+  function getname()
+  {
     echo $this->name;
   }
-  function update(){
-    echo $this->name='Shyam';
+  function update()
+  {
+    echo $this->name = 'Shyam';
   }
 }
 $p1 = new Properties();
